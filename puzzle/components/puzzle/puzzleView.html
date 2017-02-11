@@ -1,0 +1,6 @@
+<div>
+        <label>{{word.mangled}}</label>
+        <input type="text" ng-model="word.entered" ng-keydown="onKeyDown($event)"/>
+        <input type="button" value="Next" ng-click="getNextWord()"/>
+        <span>Time (in s): {{time.timeInSec}}</span>
+</div>
