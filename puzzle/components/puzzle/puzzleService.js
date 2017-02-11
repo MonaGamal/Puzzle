@@ -15,7 +15,7 @@ function puzzleService(firebaseService) {
     this.calcTotalScore = function (solvedWordArr) {
         return solvedWordArr.map(calcWordScore).reduce(combineScore, {
             userScore: 0,
-            wordsScore: 0
+            wordScore: 0
         });
     }
 
@@ -65,13 +65,18 @@ function puzzleService(firebaseService) {
                 wordScore: word.score
             };
         }
+        console.log(scoresObj);
         return scoresObj;
     };
 
     function combineScore(word1, word2) {
+        console.log({
+            userScore: word1.userScore + word2.userScore,
+            wordScore: word1.wordScore + word2.wordScore
+        });
         return {
             userScore: word1.userScore + word2.userScore,
-            wordsScore: word1.wordsScore + word2.wordsScore
+            wordScore: word1.wordScore + word2.wordScore
         };
     };
 }

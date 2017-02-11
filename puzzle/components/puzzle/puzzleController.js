@@ -41,7 +41,8 @@ function puzzleController($scope, $location, $interval, $timeout, puzzleService,
     function end() {
         $scope.score = puzzleService.calcTotalScore($scope.solvedWordArr);
         console.log($scope.solvedWordArr);
-        $location.path('score');
+        console.log($scope.score);
+        //$location.path('score');
     };
 
     function getNextWord() {
