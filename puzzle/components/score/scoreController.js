@@ -1,4 +1,7 @@
 puzzleApp.controller('scoreController', scoreController);
 
-function scoreController() {
+scoreController.$inject = ['$scope'];
+
+function scoreController($scope) {
+    $scope.volume = 75;
 }

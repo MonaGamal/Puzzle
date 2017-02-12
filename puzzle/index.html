@@ -4,6 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>Puzzle Game</title>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic|Cinzel:400,700,900" rel="stylesheet" type="text/css">
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
@@ -21,7 +28,12 @@
 </head>
 
 <body>
-    <div ng-view></div>
+     <div style="background:url(assets/images/poster.jpg) ; position: absolute; height: 817px; width: 1707px; opacity: 1; overflow: hidden;">
+        <div class="container">
+            <div ng-view></div>
+        </div>
+    </div>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="assets/js/script.js"></script>
 </html>

@@ -1,6 +1,36 @@
-<div>
-        <label>{{word.mangled}}</label>
-        <input type="text" ng-model="word.entered" ng-keydown="onKeyDown($event)"/>
-        <input type="button" value="Next" ng-click="getNextWord()"/>
-        <span>Time (in s): {{time.timeInSec}}</span>
+<br>
+<br>
+<div class="col-xs-12">
+    <div class="title text-center wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+        <h1>{{word.mangled}}</h1>
+        <span class="title line"></span>
+    </div>
+</div>
+<div class="row" style="width: 70%;height: 70%; margin: auto;position: absolute;top: 0; left: 0; bottom: 0; right: 0; padding: 40px;">
+    <div  class="col-sm-6 wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+
+        <div class="headline-wrap" style="margin-top: 100px;">
+
+            <form role="form" id="subscribe-form" class="row">
+                <div class="col-sm-12 form-group">
+                    <input class="form-control afsana-style" ng-model="word.entered" ng-keydown="onKeyDown($event)" placeholder="enter correct word"
+                        type="text" autofocus="">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <button class="btn btn-primary afsana-btn" type="button" ng-click="getNextWord()">Next Word <i class="ion-arrow-graph-up-right"></i></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div  style="width: 50%;margin: 0 auto; height: 100%" class="col-sm-6  wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+        <div class="headline-wrap">
+            <h1 class="headline quotes">
+           <span class="quotes">{{time.timeInSec}}</span>     
+            </h1>
+            <h4 class="quotes">
+                 Seconds
+            </h4>
+        </div>
+    </div>
 </div>
