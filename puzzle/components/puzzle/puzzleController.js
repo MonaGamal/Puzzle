@@ -1,10 +1,10 @@
 puzzleApp.controller('puzzleController', puzzleController);
 
-puzzleController.$inject = ['$scope', '$location', '$interval', '$timeout', 'puzzleService', 'firebaseService'];
-function puzzleController($scope, $location, $interval, $timeout, puzzleService, firebaseService) {
+puzzleController.$inject = ['$scope', '$location', '$interval', '$timeout', 'puzzleService', 'firebaseService','scoreService'];
+function puzzleController($scope, $location, $interval, $timeout, puzzleService, firebaseService, scoreService) {
 
     $scope.time = {
-        totalTimeInSec: 200,
+        totalTimeInSec: 20,
         timeInSec: 0
     };
     $scope.score = {
@@ -18,7 +18,7 @@ function puzzleController($scope, $location, $interval, $timeout, puzzleService,
         lostScore: 0, //the number of times the user used backspace and delete.it will be deducted from each word score
         score: 0 // the calculated score of the word
     };
-    $scope.solvedWordArr = [];
+    $scope.solvedWordsArr = [];
 
     $scope.start = start;
     $scope.end = end;
@@ -39,14 +39,19 @@ function puzzleController($scope, $location, $interval, $timeout, puzzleService,
     };
 
     function end() {
-        $scope.score = puzzleService.calcTotalScore($scope.solvedWordArr);
-        console.log($scope.solvedWordArr);
+        $scope.score = puzzleService.calcTotalScore($scope.solvedWordsArr);
+        console.log($scope.solvedWordsArr);
         console.log($scope.score);
+        
+        $scope.scoreService = scoreService;
+        scoreService.solvedWordsArr = $scope.solvedWordsArr;
+        scoreService.score = $scope.score;
+       
         $location.path('score');
     };
 
     function getNextWord() {
-        $scope.solvedWordArr.push($scope.word);
+        $scope.solvedWordsArr.push($scope.word);
         $scope.word = puzzleService.getRandomMangledWord($scope.wordsArr);
     };
 

@@ -11,8 +11,14 @@ function firebaseService() {
     };
     firebase.initializeApp(config);
 
-    //load words    
-    this.getWords = function () {
+    this.words = loadWords();
+
+    this.getWords = function() {
+        return this.words;
+    }
+
+    //load words
+    function loadWords() {
         var wordsObjRef = firebase.database().ref('words/');
         return wordsObjRef.once('value').then(function (snapshot) {
             return snapshot.val();

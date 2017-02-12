@@ -775,3 +775,11 @@ p {
         max-width: 260px;
     }
 }
+
+#finalScore td p{
+    color: white;
+}
+
+#finalScore th {
+    background-color: white;
+}
