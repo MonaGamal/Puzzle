@@ -65,15 +65,10 @@ function puzzleService(firebaseService) {
                 wordScore: word.score
             };
         }
-        console.log(scoresObj);
         return scoresObj;
     };
 
     function combineScore(word1, word2) {
-        console.log({
-            userScore: word1.userScore + word2.userScore,
-            wordScore: word1.wordScore + word2.wordScore
-        });
         return {
             userScore: word1.userScore + word2.userScore,
             wordScore: word1.wordScore + word2.wordScore
