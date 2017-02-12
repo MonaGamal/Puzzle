@@ -8,6 +8,7 @@ function scoreController($scope, scoreService, $location, $interval, userService
     $scope.score = scoreService.score;
     $scope.scoreInSec = 0;
     $scope.username = userService.username;
+    $scope.logOut = logOut;
 
     $scope.play = play;
 
@@ -26,5 +27,11 @@ function scoreController($scope, scoreService, $location, $interval, userService
      
     function play() {
         $location.path('puzzle');
+    }
+
+    function logOut(){
+        userService.clearUser();
+        $location.path('home')
+
     }
 }
