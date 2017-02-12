@@ -15,21 +15,19 @@ function scoreController($scope, scoreService, $location, $interval, userService
     if (scoreService.score && !scoreService.score.hasOwnProperty('userScore')) {
         $location.path('puzzle');
     }
-    else
-    {
-        if($scope.score.userScore)
-        {
+    else {
+        if ($scope.score.userScore) {
             $interval(function () {
                 $scope.scoreInSec += 1;
-            }, 100,  $scope.score.userScore);
+            }, 100, $scope.score.userScore);
         }
     }
-     
+
     function play() {
         $location.path('puzzle');
     }
 
-    function logOut(){
+    function logOut() {
         userService.clearUser();
         $location.path('home')
 

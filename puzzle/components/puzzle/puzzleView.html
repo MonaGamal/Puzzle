@@ -1,4 +1,7 @@
-<form ng-submit="getNextWord()">
+<div class="preloader" ng-hide="word.mangled">
+
+</div>
+<form ng-show="word.mangled" ng-submit="getNextWord()">
     <br>
     <br>
     <div class="col-xs-12">

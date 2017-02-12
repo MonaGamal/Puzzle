@@ -1,10 +1,10 @@
 puzzleApp.controller('puzzleController', puzzleController);
 
-puzzleController.$inject = ['$scope', '$location', '$interval', '$timeout', 'puzzleService', 'firebaseService','scoreService', 'userService'];
+puzzleController.$inject = ['$scope', '$location', '$interval', '$timeout', 'puzzleService', 'firebaseService', 'scoreService', 'userService'];
 function puzzleController($scope, $location, $interval, $timeout, puzzleService, firebaseService, scoreService, userService) {
 
     $scope.time = {
-        totalTimeInSec: 10,
+        totalTimeInSec: 40,
         timeInSec: 0
     };
     $scope.score = {
@@ -31,7 +31,6 @@ function puzzleController($scope, $location, $interval, $timeout, puzzleService,
     });
 
     function start() {
-        console.log(userService.username);
         $scope.word = puzzleService.getRandomMangledWord($scope.wordsArr);
         $interval(function () {
             $scope.time.timeInSec += 1;

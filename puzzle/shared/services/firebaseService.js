@@ -13,7 +13,7 @@ function firebaseService() {
 
     this.words = loadWords();
 
-    this.getWords = function() {
+    this.getWords = function () {
         return this.words;
     }
 

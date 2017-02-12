@@ -1,11 +1,10 @@
 puzzleApp.controller('homeController', homeController);
 
-homeController.$inject = ['firebaseService', '$location', '$scope','userService'];
+homeController.$inject = ['firebaseService', '$location', '$scope', 'userService'];
 function homeController(firebaseService, $location, $scope, userService) {
     $scope.submit = submit;
 
-    if(userService.username){
-        console.log(userService.username);
+    if (userService.username) {
         $location.path('puzzle');
     }
 
