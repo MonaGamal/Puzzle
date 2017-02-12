@@ -4,7 +4,7 @@ puzzleController.$inject = ['$scope', '$location', '$interval', '$timeout', 'puz
 function puzzleController($scope, $location, $interval, $timeout, puzzleService, firebaseService, scoreService) {
 
     $scope.time = {
-        totalTimeInSec: 20,
+        totalTimeInSec: 10,
         timeInSec: 0
     };
     $scope.score = {
