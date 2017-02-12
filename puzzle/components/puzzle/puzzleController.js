@@ -24,6 +24,7 @@ function puzzleController($scope, $location, $interval, $timeout, puzzleService,
     $scope.end = end;
     $scope.getNextWord = getNextWord;
     $scope.onKeyDown = onKeyDown;
+    $scope.username = userService.username;
 
     firebaseService.getWords().then(function (wordsArr) {
         $scope.wordsArr = wordsArr;
