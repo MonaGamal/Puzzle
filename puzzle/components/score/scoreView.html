@@ -2,22 +2,22 @@
     <br>
     <br>
     <div class="col-xs-12">
-        <div class="title text-center wow zoomIn animated">
+        <div class="title text-center zoomIn animated">
             <h1>Final Score</h1>
             <span class="title line"></span>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12  wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+        <div class="col-sm-12  fadeInRight animated">
             <h1 class="headline quotes">
-                <span class="quotes">{{score.userScore}} / {{score.wordScore}}</span>
+                <span class="quotes">{{scoreInSec}} / {{score.wordScore}}</span>
             </h1>
             <h4 class="quotes">
                 Score
             </h4>
             <br>
             <div class="col-sm-12 form-group">
-                <button class="btn btn-primary afsana-btn" type="button" ng-click="play()">Play Again <i class="ion-refresh" style="display: inline-block;"></i></button>
+                <button class="btn btn-primary afsana-btn" type="button" ng-click="play()">Play Again <i class="ion-refresh"></i></button>
             </div>
         </div>
     </div>

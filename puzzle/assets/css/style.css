@@ -6,6 +6,7 @@
 body {
     overflow-x: hidden;
     font-family: 'Josefin Sans', sans-serif;
+    color: white;
 }
 #main {
     position: relative;
@@ -21,7 +22,6 @@ h1{
 }
 .headline {
     font-size: 2.3em;
-    text-transform: uppercase;
     font-weight: 600;
     padding-top: 0%;
     padding-bottom: 0.5em;
@@ -71,6 +71,7 @@ h1{
     height: auto;
     outline: none;
     transition: 0.4s ease border;
+    color: #fff;
 }
 .mc-email:active, 
 .mc-email:focus{
@@ -169,153 +170,7 @@ h1{
     width: 100%;
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
-//  Responsive Fixes
-/////////////////////////////////////////////////////////////////////*/
-
-/*1300px - 992px*/
-@media all and (max-width: 1300px) and (min-width: 992px) {
-    .headline {
-        font-size: 2em;
-    }
-    .text .type-time {
-        font-size: 0.5em;
-    }
-}
-/*992px*/
-@media all and (max-width: 992px) {
-    .center-container {
-        padding-top: 165px;
-        transform: translate(-50%,-47%);
-        -webkit-transform: translate(-50%,-47%);
-        -moz-transform: translate(-50%,-47%);
-        -ms-transform: translate(-50%,-47%);
-        -o-transform: translate(-50%,-47%);
-    }
-    .headline-wrap {
-        padding-top: 15px;
-        text-align: center;
-    }
-    .headline {
-        font-size: 1.2em;
-        padding-top: 0px;
-    }
-    .text {
-        font-size: 1.2em;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-     }
-}
-
-/*768px*/
-@media all and (max-width: 768px) {
-    .clock-item {
-        margin: 0px;
-        padding-bottom: 20px;
-    }
-    .headline {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-    .text .val {
-        font-size: 80%;
-    }
-    #subscribe-form {
-        margin: 0 auto;
-        margin-bottom: 30px !important;
-        padding-left: 4px;
-        padding-right: 4px;
-    }
-    .text {
-        font-size: 30%;
-        padding-left: 0px;
-    }
-    .portrait{
-        margin: 0 auto;
-        margin-bottom: 60px;
-    }
-    .center-container {
-        width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 70px;
-    }
-    .text {
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%, 30%);
-        -webkit-transform: translate(-50%, 30%);
-        -ms-transform: translate(-50%, 30%);
-        -o-transform: translate(-50%, 30%);
-    }
-    .form-group.col-xs-2.push-btn-left {
-        padding-right: 6px;
-    }
-    .push-btn-left {
-        margin-left: -35px;
-    }
-}
-
-/*480px*/
-@media all and (max-width: 480px) {
-    .center-container {
-        padding-top: 80px;
-    }
-    .headline {
-        font-size: 1em;
-        margin-bottom: 20px;
-    }
-    .text .val {
-        font-size: 50%;
-    }
-    .text  {
-        font-size: 20%;
-        padding-left: 0px;
-    }
-    .text {
-        -webkit-transform: translate(-50%, 74%);
-        -ms-transform: translate(-50%, 74%);
-        -o-transform: translate(-50%, 74%);
-        transform: translate(-50%, 74%);
-    }
-}
-
-/*320px*/
-@media all and (max-width: 320px) {
-    .center-container {
-        padding-top: 130px;
-        transform: translate(-50%,-50%);
-    }
-    .headline {
-        font-size: 0.9em;
-        margin-bottom: 30px;
-    }
-    .text .val {
-        font-size: 55%;
-    }
-    .text {
-        font-size: 22%;
-        padding-left: 0px;
-    }
-    .text {
-        transform: translate(-50%, 60%);
-    }
-    .col-xs-3 {
-        padding: 0px 5px;
-    }
-    .clock.row{
-        margin: 0px;
-    }
-    .arrow-down {
-        position: absolute;
-        width: 100%;
-        bottom: -1%;
-        z-index: 899;
-    }
-    .title.line {
-        top: 25%;
-    }
-    .title h1 {
-        font-size: 2em;
-    }
+.row-eq-height
+{
+    margin-top: 10%;
 }
