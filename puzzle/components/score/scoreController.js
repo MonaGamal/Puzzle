@@ -1,12 +1,13 @@
 puzzleApp.controller('scoreController', scoreController);
 
-scoreController.$inject = ['$scope', 'scoreService', '$location', '$interval'];
+scoreController.$inject = ['$scope', 'scoreService', '$location', '$interval', 'userService'];
 
-function scoreController($scope, scoreService, $location, $interval) {
+function scoreController($scope, scoreService, $location, $interval, userService) {
 
     $scope.solvedWordsArr = scoreService.solvedWordsArr;
     $scope.score = scoreService.score;
     $scope.scoreInSec = 0;
+    $scope.username = userService.username;
 
     $scope.play = play;
 

@@ -26,9 +26,9 @@ function firebaseService() {
     };
 
     //Add new user
-    this.addUser = function (name) {
-        if (name) {
-            firebase.database().ref('users/' + name).set({ score: "0" });
+    this.addUser = function (username, score) {
+        if (username) {
+            firebase.database().ref('users/' + username).set({ score: score || 0 });
         }
     };
 }
