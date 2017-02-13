@@ -1,0 +1,14 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\mtayseer\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.2.2
+[debug] Platform:     win32
+[debug] Node Version: v6.9.4
+[debug] Time:         Mon Feb 13 2017 23:28:23 GMT+0100 (Romance Standard Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\mtayseer\Desktop\Mona\Puzzle
+[info] Public Directory: puzzle
+[info] 
+[info] Server listening at: http://localhost:5000
