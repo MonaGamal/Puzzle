@@ -1,33 +1,17 @@
-
-/* ///////////////////////////////////////////////////////////////////// 
-//  01 - Global 
-/////////////////////////////////////////////////////////////////////*/
-
-body {
+html, body {
+    height: 100%;
     font-family: 'Josefin Sans', sans-serif;
     color: white;
-    overflow: hidden
-}
-#main {
-    position: relative;
-    height: 760px; 
-    opacity: 1; 
-    overflow: hidden;
-    background-image:url('../../assets/images/poster.jpg'); 
-}
-p {
-    font-size: 1.8em;
-}
-h1{
     text-align: center;
+    align-content: center;
+
+    background: #333;/* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #333, rebeccapurple); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #333, rebeccapurple); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right,#333, rebeccapurple); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #333, rebeccapurple); /* Standard syntax */
 }
-.headline {
-    font-size: 2.3em;
-    font-weight: 600;
-    padding-top: 0%;
-    padding-bottom: 0.5em;
-    color: #fff;
-}
+
 .title {
     margin: 0px 0 5em;
     position: relative;
@@ -59,11 +43,6 @@ h1{
     line-height: 0;
     margin: 0;
 }
-
-/* ///////////////////////////////////////////////////////////////////// 
-//  02 - home 
-/////////////////////////////////////////////////////////////////////*/
-
 .mc-email {
     border-radius: 0px;
     background: transparent;
@@ -87,31 +66,23 @@ h1{
     color: #fff;
     transition: 0.4s ease-in;
 }
+.mc-btn {
+    border-radius: 0px;
+    font-size: 1.5em;
+    padding: 0.29em 0.8em;
+    background: transparent;
+    color: #fff;
+    transition: 0.4s ease-in;
+}
 .mc-btn:hover {
     background: #9c27b0;
     color: #fff;
     border-color: #9c27b0;
 }
 .push-btn-left{
-    margin-left: -30px;
-}
-.arrow-down {
-    position: absolute;
-    width: 100%;
-    bottom: 2%;
-    z-index: 899;
-}
-.arrow-down a{
-    font-size: 2em;
-    color: #fff;
-}
-.arrow-down a:hover {
-    color: #9c27b0;
+    margin-left: -42px;
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
-//  Puzzle
-/////////////////////////////////////////////////////////////////////*/
 
 .afsana-style, .afsana-form textarea {
     background: transparent;
@@ -149,19 +120,6 @@ h1{
     border-right: 2px solid #fff;
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
-// Score
-/////////////////////////////////////////////////////////////////////*/
-
-#finalScore td p{
-    color: white;
-}
-
-#finalScore th {
-    background-color: white;
-}
-
-/*Heading text*/
 .quotes {
     font-size: 3.8em;
     font-weight: 100;
@@ -184,4 +142,84 @@ h1{
     height: 100%; 
     overflow: visible; 
     background: url('../../assets/images/preloader.gif') no-repeat center center; 
+}
+
+@media all and (max-width: 1300px) and (min-width: 992px) {
+    .headline {
+        font-size: 2em;
+    }
+}
+@media all and (max-width: 992px) {
+    .headline-wrap {
+        padding-top: 15px;
+        text-align: center;
+    }
+    .headline {
+        font-size: 1.2em;
+        padding-top: 0px;
+    }
+}
+@media all and (max-width: 768px) {
+    #mobile-nav {
+        margin-top: -72px;
+        position: relative;
+        z-index: 9999;
+    }
+    .headline {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .form-group.col-xs-2.push-btn-left {
+        padding-right: 6px;
+    }
+    .push-btn-left {
+        margin-left: -35px;
+    }
+}
+@media all and (max-width: 480px) {
+    .center-container {
+        padding-top: 80px;
+    }
+    .headline {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    .clock {
+        padding: 0em;
+    }
+    .text .val {
+        font-size: 50%;
+    }
+    .text .type-time {
+        font-size: 20%;
+        padding-left: 0px;
+    }
+    .text {
+        -webkit-transform: translate(-50%, 74%);
+        -ms-transform: translate(-50%, 74%);
+        -o-transform: translate(-50%, 74%);
+        transform: translate(-50%, 74%);
+    }
+}
+@media all and (max-width: 320px) {
+    .headline {
+        font-size: 0.9em;
+        margin-bottom: 30px;
+    }
+    .col-xs-3 {
+        padding: 0px 5px;
+    }
+   
+    .arrow-down {
+        position: absolute;
+        width: 100%;
+        bottom: -1%;
+        z-index: 899;
+    }
+    .title.line {
+        top: 25%;
+    }
+    .title h1 {
+        font-size: 2em;
+    }
 }

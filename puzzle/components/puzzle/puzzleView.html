@@ -11,26 +11,24 @@
         </div>
     </div>
     <div class="row">
-         <h4 class="quotes">
-                Welcome, {{username}}
-            </h4>
+        <h4 class="quotes">
+            Welcome, {{username}} {{wordEntered}}
+        </h4>
     </div>
-    <div class="row">
-        <div class="col-sm-6 fadeInLeft animated row-eq-height">
-            <div class="col-sm-12 form-group">
+    <div class="inner cover fadeInLeft animated">
+        <div class="col-md-6 fadeInLeft animated row-eq-height">
+            <div class="col-sm-8 col-md-offset-4 form-group">
                 <input class="form-control afsana-style" ng-model="word.entered" ng-keydown="onKeyDown($event)" placeholder="enter correct word"
-                    type="text" autofocus="">
+                    type="text" autofocus="" />
             </div>
-            <div class="col-sm-12 form-group">
+            <div class="col-sm-8 col-md-offset-4 form-group">
                 <button class="btn btn-primary afsana-btn" type="button" ng-click="getNextWord()">Next Word <i class="ion-arrow-graph-up-right"></i></button>
             </div>
         </div>
-        <div class="col-sm-6  fadeInRight animated">
-            <div class="headline-wrap">
-                <h1 class="headline quotes">
-                    <span class="quotes">{{time.timeInSec}}</span>
-                </h1>
-            </div>
+        <div class="col-md-6 fadeInRight animated">
+            <h1 class="headline quotes">
+                <span class="quotes">{{time.timeInSec}}</span>
+            </h1>
         </div>
     </div>
 </form>

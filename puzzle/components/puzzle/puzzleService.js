@@ -5,7 +5,7 @@ puzzleService.$inject = ['firebaseService'];
 function puzzleService(firebaseService) {
 
     this.getRandomMangledWord = function (wordsArr) {
-        wordObj = getMangledWord(wordsArr);
+        var wordObj = getMangledWord(wordsArr);
         wordObj.score = calcWordMaxScore(wordObj.mangled);
         wordObj.entered = "";
         wordObj.lostScore = 0;
@@ -49,7 +49,7 @@ function puzzleService(firebaseService) {
     }
 
     function calcWordMaxScore(word) {
-        return Math.floor(1.95 ^ (word.length / 3));
+        return Math.floor(Math.pow(1.95,(word.length / 3)));
     };
 
     function calcWordScore(word) {

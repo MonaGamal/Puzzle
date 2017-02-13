@@ -11,13 +11,14 @@ function puzzleController($scope, $location, $interval, $timeout, puzzleService,
         wordsScore: 0, // words total calculated score
         userScore: 0 // score of the solved words
     };
-    $scope.word = {
-        mangled: "",
-        unmangled: "", //the intial selected word
-        entered: "", // the word entered by the user
-        lostScore: 0, //the number of times the user used backspace and delete.it will be deducted from each word score
-        score: 0 // the calculated score of the word
-    };
+    $scope.word = {}
+    $scope.word.mangled = "";
+    $scope.word.unmangled = ""; //the intial selected word
+    $scope.word.entered = ""; // the word entered by the user
+    $scope.wordEntered = '';
+    $scope.word.lostScore = 0; //the number of times the user used backspace and delete.it will be deducted from each word score
+    $scope.word.score = 0 // the calculated score of the word
+ 
     $scope.solvedWordsArr = [];
 
     $scope.start = start;
@@ -32,7 +33,9 @@ function puzzleController($scope, $location, $interval, $timeout, puzzleService,
     });
 
     function start() {
-        $scope.word = puzzleService.getRandomMangledWord($scope.wordsArr);
+        var word = puzzleService.getRandomMangledWord($scope.wordsArr);
+        angular.copy(word, $scope.word);
+        
         $interval(function () {
             $scope.time.timeInSec += 1;
         }, 1000, $scope.time.totalTimeInSec);
@@ -48,8 +51,9 @@ function puzzleController($scope, $location, $interval, $timeout, puzzleService,
     };
 
     function getNextWord() {
-        $scope.solvedWordsArr.push($scope.word);
-        $scope.word = puzzleService.getRandomMangledWord($scope.wordsArr);
+        $scope.solvedWordsArr.push(angular.copy($scope.word));
+        var word = puzzleService.getRandomMangledWord($scope.wordsArr);
+        angular.copy(word, $scope.word);
     };
 
     function onKeyDown($event) {
